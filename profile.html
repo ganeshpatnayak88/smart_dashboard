@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">SmartDash</h2>
+            <nav>
+                <a href="index.html">📊 Dashboard</a>
+                <a href="tasks.html">✅ Tasks</a>
+                <a href="notes.html">📝 Notes</a>
+                <a href="profile.html">⚙️ Profile</a>
+
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <div class="page">
+
+                <h1 class="page-title">Profile & Settings</h1>
+
+                <div class="grid grid-3">
+                    <div class="card">
+                        <p>👤 User Name</p>
+                        <input id="usernameInput" />
+                        <button id="saveNameBtn">💾 Save</button>
+                    </div>
+
+                    <div class="card">
+                        <p>🎨 Theme</p>
+                        <button id="toggleThemeBtn">🌙 / ☀ Toggle</button>
+                    </div>
+
+                    <div class="card">
+                        <p>⚠️ Danger Zone</p>
+                        <button id="resetBtn" class="danger">🧨 Reset All Data</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+
+
+        <!-- PAGE CONTENT GOES HERE -->
+
+        </main>
+    </div>
+</body>
+<script src="js/profile.js"></script>
+
+</html>

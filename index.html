@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h2 class="logo">SmartDash</h2>
+            <nav>
+                <a href="index.html">📊 Dashboard</a>
+                <a href="tasks.html">✅ Tasks</a>
+                <a href="notes.html">📝 Notes</a>
+                <a href="profile.html">⚙️ Profile</a>
+
+
+            </nav>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+            <div class="page">
+
+                <div>
+                    <h1 class="page-title" id="greeting"></h1>
+                    <p id="datetime"></p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="card stat">
+                        <p>📋 Total Tasks</p>
+                        <span id="total"></span>
+                    </div>
+
+                    <div class="card stat">
+                        <p>✔ Completed</p>
+                        <span id="completed"></span>
+                    </div>
+
+                    <div class="card stat">
+                        <p>⏳ Pending</p>
+                        <span id="pending"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+
+
+        <!-- PAGE CONTENT GOES HERE -->
+
+        </main>
+    </div>
+</body>
+<script src="js/dashboard.js"></script>
+
+</html>
