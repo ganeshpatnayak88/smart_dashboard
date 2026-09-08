@@ -2,11 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Smart Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Smart Dashboard - Task &amp; Productivity Management</title>
+
+    <meta name="description"
+        content="Smart Dashboard is a simple productivity web application for managing tasks, tracking progress, and organizing daily activities.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://smartdashboard-tc2q.onrender.com/">
+
+    <!-- Open Graph metadata for social sharing -->
+    <meta property="og:title" content="Smart Dashboard - Task &amp; Productivity Management">
+    <meta property="og:description"
+        content="Manage tasks, track progress, and organize daily activities with Smart Dashboard.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smartdashboard-tc2q.onrender.com/">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -14,14 +29,13 @@
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <h2 class="logo">SmartDash</h2>
-            <nav>
-                <a href="index.html">📊 Dashboard</a>
+            <a class="logo" href="/" aria-label="Smart Dashboard home">SmartDash</a>
+
+            <nav aria-label="Main navigation">
+                <a href="/" aria-current="page">📊 Dashboard</a>
                 <a href="tasks.html">✅ Tasks</a>
                 <a href="notes.html">📝 Notes</a>
                 <a href="profile.html">⚙️ Profile</a>
-
-
             </nav>
         </aside>
 
@@ -29,39 +43,75 @@
         <main class="content">
             <div class="page">
 
-                <div>
-                    <h1 class="page-title" id="greeting"></h1>
-                    <p id="datetime"></p>
-                </div>
+                <header>
+                    <h1 class="page-title">Smart Dashboard</h1>
 
-                <div class="grid grid-3">
-                    <div class="card stat">
-                        <p>📋 Total Tasks</p>
-                        <span id="total"></span>
+                    <p class="intro-text">
+                        A simple productivity dashboard for managing tasks, tracking progress,
+                        and organizing your daily activities.
+                    </p>
+
+                    <p id="greeting" aria-live="polite">
+                        Welcome to Smart Dashboard
+                    </p>
+
+                    <p id="datetime" class="datetime" aria-live="polite"></p>
+                </header>
+
+                <section aria-labelledby="overview-heading">
+                    <h2 id="overview-heading" class="section-title">
+                        Dashboard Overview
+                    </h2>
+
+                    <div class="grid grid-3">
+
+                        <article class="card stat">
+                            <p>📋 Total Tasks</p>
+                            <span id="total">0</span>
+                        </article>
+
+                        <article class="card stat">
+                            <p>✔ Completed</p>
+                            <span id="completed">0</span>
+                        </article>
+
+                        <article class="card stat">
+                            <p>⏳ Pending</p>
+                            <span id="pending">0</span>
+                        </article>
+
+                    </div>
+                </section>
+
+                <section class="card" aria-labelledby="features-heading">
+
+                    <h2 id="features-heading">
+                        Productivity Tools
+                    </h2>
+
+                    <p class="section-text">
+                        Use the task manager to create and complete tasks, keep notes for
+                        important information, and customize your profile settings.
+                    </p>
+
+                    <div class="quick-links">
+                        <a class="button-link" href="tasks.html">
+                            Manage Tasks
+                        </a>
+
+                        <a class="button-link" href="notes.html">
+                            Manage Notes
+                        </a>
                     </div>
 
-                    <div class="card stat">
-                        <p>✔ Completed</p>
-                        <span id="completed"></span>
-                    </div>
-
-                    <div class="card stat">
-                        <p>⏳ Pending</p>
-                        <span id="pending"></span>
-                    </div>
-
-                </div>
+                </section>
 
             </div>
         </main>
 
-
-
-        <!-- PAGE CONTENT GOES HERE -->
-
-        </main>
     </div>
+
+    <script src="js/dashboard.js" defer></script>
 </body>
-<script src="js/dashboard.js"></script>
 
 </html>

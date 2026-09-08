@@ -2,53 +2,132 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Smart Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Task Manager - Smart Dashboard</title>
+
+    <meta name="description"
+        content="Create, complete, and manage personal tasks with the Smart Dashboard task manager.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+        href="https://smartdashboard-tc2q.onrender.com/tasks.html">
+
+    <meta property="og:title" content="Task Manager - Smart Dashboard">
+
+    <meta property="og:description"
+        content="Create, complete, and manage personal tasks with the Smart Dashboard task manager.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url"
+        content="https://smartdashboard-tc2q.onrender.com/tasks.html">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <div class="app">
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <h2 class="logo">SmartDash</h2>
-            <nav>
-                <a href="index.html">📊 Dashboard</a>
-                <a href="tasks.html">✅ Tasks</a>
-                <a href="notes.html">📝 Notes</a>
-                <a href="profile.html">⚙️ Profile</a>
+
+            <a class="logo"
+                href="/"
+                aria-label="Smart Dashboard home">
+                SmartDash
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="/">
+                    📊 Dashboard
+                </a>
+
+                <a href="tasks.html"
+                    aria-current="page">
+                    ✅ Tasks
+                </a>
+
+                <a href="notes.html">
+                    📝 Notes
+                </a>
+
+                <a href="profile.html">
+                    ⚙️ Profile
+                </a>
 
             </nav>
+
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="content">
+
             <div class="page">
 
-                <h1 class="page-title">Task Manager</h1>
+                <header>
 
-                <div class="grid grid-2">
-                    <div class="card">
-                        <input id="taskInput" placeholder="Enter task" />
-                        <button id="addTaskBtn">Add Task</button>
+                    <h1 class="page-title">
+                        Task Manager
+                    </h1>
+
+                    <p class="intro-text">
+                        Create, track, complete, and delete your personal tasks.
+                    </p>
+
+                </header>
+
+                <section aria-labelledby="task-tools-heading">
+
+                    <h2 id="task-tools-heading"
+                        class="section-title">
+                        Manage Your Tasks
+                    </h2>
+
+                    <div class="grid grid-2">
+
+                        <div class="card">
+
+                            <label for="taskInput">
+                                New task
+                            </label>
+
+                            <input
+                                id="taskInput"
+                                type="text"
+                                placeholder="Enter a task"
+                                autocomplete="off">
+
+                            <button
+                                id="addTaskBtn"
+                                type="button">
+                                Add Task
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="taskList"
+                            class="grid"
+                            aria-live="polite">
+                        </div>
+
                     </div>
 
-                    <div id="taskList" class="grid"></div>
-                </div>
+                </section>
 
             </div>
-        </main>
-
-
-
-        <!-- PAGE CONTENT GOES HERE -->
 
         </main>
+
     </div>
+
+    <script src="js/tasks.js" defer></script>
+
 </body>
-<script src="js/tasks.js"></script>
 
 </html>

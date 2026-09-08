@@ -2,63 +2,157 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Smart Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Profile &amp; Settings - Smart Dashboard</title>
+
+    <meta name="description"
+        content="Manage your Smart Dashboard profile, theme preferences, and local application data.">
+
+    <!-- Personal settings page: don't show this page in search results -->
+    <meta name="robots"
+        content="noindex, follow">
+
+    <link rel="canonical"
+        href="https://smartdashboard-tc2q.onrender.com/profile.html">
+
+    <link rel="stylesheet"
+        href="css/style.css">
 
 </head>
 
 <body>
+
     <div class="app">
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <h2 class="logo">SmartDash</h2>
-            <nav>
-                <a href="index.html">📊 Dashboard</a>
-                <a href="tasks.html">✅ Tasks</a>
-                <a href="notes.html">📝 Notes</a>
-                <a href="profile.html">⚙️ Profile</a>
+
+            <a class="logo"
+                href="/"
+                aria-label="Smart Dashboard home">
+                SmartDash
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="/">
+                    📊 Dashboard
+                </a>
+
+                <a href="tasks.html">
+                    ✅ Tasks
+                </a>
+
+                <a href="notes.html">
+                    📝 Notes
+                </a>
+
+                <a href="profile.html"
+                    aria-current="page">
+                    ⚙️ Profile
+                </a>
 
             </nav>
+
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="content">
+
             <div class="page">
 
-                <h1 class="page-title">Profile & Settings</h1>
+                <header>
 
-                <div class="grid grid-3">
-                    <div class="card">
-                        <p>👤 User Name</p>
-                        <input id="usernameInput" />
-                        <button id="saveNameBtn">💾 Save</button>
+                    <h1 class="page-title">
+                        Profile &amp; Settings
+                    </h1>
+
+                    <p class="intro-text">
+                        Customize your name, theme, and local Smart Dashboard data.
+                    </p>
+
+                </header>
+
+                <section aria-labelledby="settings-heading">
+
+                    <h2 id="settings-heading"
+                        class="section-title">
+                        Application Settings
+                    </h2>
+
+                    <div class="grid grid-3">
+
+                        <div class="card">
+
+                            <h3>👤 User Name</h3>
+
+                            <label for="usernameInput">
+                                Your name
+                            </label>
+
+                            <input
+                                id="usernameInput"
+                                type="text"
+                                autocomplete="name">
+
+                            <button
+                                id="saveNameBtn"
+                                type="button">
+                                💾 Save
+                            </button>
+
+                        </div>
+
+                        <div class="card">
+
+                            <h3>🎨 Theme</h3>
+
+                            <p class="section-text">
+                                Switch between dark and light mode.
+                            </p>
+
+                            <button
+                                id="toggleThemeBtn"
+                                type="button">
+                                🌙 / ☀ Toggle
+                            </button>
+
+                        </div>
+
+                        <div class="card">
+
+                            <h3>⚠️ Danger Zone</h3>
+
+                            <p class="section-text">
+                                Clear all locally stored dashboard data.
+                            </p>
+
+                            <button
+                                id="resetBtn"
+                                class="danger"
+                                type="button">
+                                🧨 Reset All Data
+                            </button>
+
+                        </div>
+
                     </div>
 
-                    <div class="card">
-                        <p>🎨 Theme</p>
-                        <button id="toggleThemeBtn">🌙 / ☀ Toggle</button>
-                    </div>
-
-                    <div class="card">
-                        <p>⚠️ Danger Zone</p>
-                        <button id="resetBtn" class="danger">🧨 Reset All Data</button>
-                    </div>
-
-                </div>
+                </section>
 
             </div>
-        </main>
-
-
-
-        <!-- PAGE CONTENT GOES HERE -->
 
         </main>
+
     </div>
+
+    <script src="js/profile.js" defer></script>
+
 </body>
-<script src="js/profile.js"></script>
 
 </html>

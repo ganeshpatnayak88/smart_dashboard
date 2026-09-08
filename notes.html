@@ -2,54 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Smart Dashboard</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Notes - Smart Dashboard</title>
+
+    <meta name="description"
+        content="Create, save, and manage personal notes with the Smart Dashboard notes tool.">
+
+    <meta name="robots"
+        content="index, follow">
+
+    <link rel="canonical"
+        href="https://smartdashboard-tc2q.onrender.com/notes.html">
+
+    <meta property="og:title"
+        content="Notes - Smart Dashboard">
+
+    <meta property="og:description"
+        content="Create, save, and manage personal notes with the Smart Dashboard notes tool.">
+
+    <meta property="og:type"
+        content="website">
+
+    <meta property="og:url"
+        content="https://smartdashboard-tc2q.onrender.com/notes.html">
+
+    <link rel="stylesheet"
+        href="css/style.css">
 
 </head>
 
 <body>
+
     <div class="app">
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <h2 class="logo">SmartDash</h2>
-            <nav>
-                <a href="index.html">📊 Dashboard</a>
-                <a href="tasks.html">✅ Tasks</a>
-                <a href="notes.html">📝 Notes</a>
-                <a href="profile.html">⚙️ Profile</a>
+
+            <a class="logo"
+                href="/"
+                aria-label="Smart Dashboard home">
+                SmartDash
+            </a>
+
+            <nav aria-label="Main navigation">
+
+                <a href="/">
+                    📊 Dashboard
+                </a>
+
+                <a href="tasks.html">
+                    ✅ Tasks
+                </a>
+
+                <a href="notes.html"
+                    aria-current="page">
+                    📝 Notes
+                </a>
+
+                <a href="profile.html">
+                    ⚙️ Profile
+                </a>
 
             </nav>
+
         </aside>
 
         <!-- MAIN CONTENT -->
         <main class="content">
+
             <div class="page">
 
-                <h1 class="page-title">Notes</h1>
+                <header>
 
-                <div class="grid grid-2">
-                    <div class="card">
-                        <textarea id="noteInput" placeholder="Write your note..."></textarea>
-                        <button id="addNoteBtn">Add Note</button>
+                    <h1 class="page-title">
+                        Notes
+                    </h1>
+
+                    <p class="intro-text">
+                        Write and manage personal notes in one place.
+                    </p>
+
+                </header>
+
+                <section aria-labelledby="notes-tools-heading">
+
+                    <h2 id="notes-tools-heading"
+                        class="section-title">
+                        Manage Your Notes
+                    </h2>
+
+                    <div class="grid grid-2">
+
+                        <div class="card">
+
+                            <label for="noteInput">
+                                New note
+                            </label>
+
+                            <textarea
+                                id="noteInput"
+                                placeholder="Write your note..."
+                                aria-label="New note">
+                            </textarea>
+
+                            <button
+                                id="addNoteBtn"
+                                type="button">
+                                Add Note
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="notesContainer"
+                            class="grid"
+                            aria-live="polite">
+                        </div>
+
                     </div>
 
-                    <div id="notesContainer" class="grid"></div>
-                </div>
+                </section>
 
             </div>
-        </main>
-
-
-
-
-        <!-- PAGE CONTENT GOES HERE -->
 
         </main>
+
     </div>
+
+    <script src="js/notes.js" defer></script>
+
 </body>
-<script src="js/notes.js"></script>
 
 </html>
